@@ -24,30 +24,20 @@ else
     disp('wyniki obliczone metodą iteracyjną Jacobiego w podpunkcie a nie są prawidłowe')
 end
 
-if A*X2 == B
-    disp('wyniki obliczone metodą iteracyjną Jacobiego w podpunkcie a są prawidłowe')
-else
-    disp('wyniki obliczone metodą iteracyjną Jacobiego w podpunkcie a nie są prawidłowe')
-end
-
-if C*X3 == D
+if C*X2 == D
     disp('wyniki obliczone metodą iteracyjną Jacobiego w podpunkcie b są prawidłowe')
 else
     disp('wyniki obliczone metodą iteracyjną Jacobiego w podpunkcie b nie są prawidłowe')
 end
 
-if C*X4 == D
-    disp('wyniki obliczone metodą iteracyjną Jacobiego w podpunkcie b są prawidłowe')
-else
-    disp('wyniki obliczone metodą iteracyjną Jacobiego w podpunkcie b nie są prawidłowe')
-end
+
 
 subplot(1,2,1)
 
 [x,y] = meshgrid(-10:0.75:10,-10:0.75:10);
-z5 = (8-x-2*y)/3;
-z6 = 3-2*x-y;
-z7 = (5+x-y)/2;
+z5 = 7 - 4*x + y;
+z6 = -21-4*x+8*y;
+z7 = (15+2*x-y)/5;
 surf(x,y,z5);
 hold on;
 surf(x,y,z6);
@@ -62,9 +52,9 @@ zlabel('z')
 subplot(1,2,2)
 
 [x,y] = meshgrid(-10:0.75:10,-10:0.75:10);
-z8 = (2.2132-x)/3.1223;
-z9 = 3.021-4.122*x-12.123*y;
-z10 = (5.8921-x+y)/2;
+z8 = 7 - 4*x - 3*y;
+z9 = 7 - x - 4*y;
+z10 = (5.5-3*x-y)/5;
 surf(x,y,z8);
 hold on;
 surf(x,y,z9);

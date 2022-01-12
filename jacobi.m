@@ -6,7 +6,8 @@ elseif det(A) == 0
     disp('Wyznacznik macierzy A wynosi 0')
     return
 end
-
+A
+B
 U = A;
 U(:,3) = 0;
 U([1 2],2) = 0;
@@ -23,9 +24,18 @@ D([2 3],2) = 0;
 D(3,3) = 0;
 D
 
-X=[x;y;z]
-X = -(inv(D))*(U+L)*X+inv(D)*B
+X=[0,0,0]
 
+%M = -inv(D)*(U+L)
+%w = inv(D)*B
+
+%5X = -(inv(D)).*(U+L).*X+inv(D).*B
+
+
+
+x = X(1)
+y = X(2)
+z = X(3)
 end
 
 
