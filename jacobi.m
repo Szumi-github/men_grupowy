@@ -1,5 +1,5 @@
 function [x,y,z] = jacobi(A,B)
-if size(A) ~= [3,3] | size(B) ~= [3,1]
+if size(A) ~= [3,3] && size(B) ~= [3,1]
     disp('Nieprawidłowy rozmiar tablic')
     return
 elseif det(A) == 0
