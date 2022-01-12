@@ -25,11 +25,13 @@ U(3,3) = 0;
 U
 
 X=[1;1;1];
+Xd = X;
 k=0;
-while k<200
+while k<20
 Xd=X;
 X = -(inv(D))*(U+L)*Xd+inv(D)*B;
 k = k+1;
+X
 end
 
 x = X(1)

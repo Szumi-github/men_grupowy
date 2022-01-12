@@ -17,7 +17,6 @@ X1 = [x1;y1;z1];
 X2 = [x2;y2;z2];
 
 
-
 if A*X1 == B
     disp('wyniki obliczone metodą iteracyjną Jacobiego w podpunkcie a są prawidłowe')
 else
