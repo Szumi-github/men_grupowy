@@ -1,0 +1,1 @@
+function czas,vector = MojOscylator(czas,vector)

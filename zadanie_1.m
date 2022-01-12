@@ -1,28 +1,27 @@
-% Zadanie 1 - MEN grupowy
-
+% Zadanie 1
 %podpunkt a
 A = [4 -1 1;4 -8 1;-2 1 5];
 B = [7;-21;15];
 %rozwiązanie za pomocą metody Jacobiego
-[x1,y1,z1] = jacobi(A,B);
+[x1,y1,z1] = jacobi(A,B,-2);
 
 %podpunkt b
 C = [4 3 1;1 4 1;3 1 5];
 D = [7;7;5.5];
 %rozwiązanie za pomocą metody Jacobiego
-[x2,y2,z2] = jacobi(C,D);
+[x2,y2,z2] = jacobi(C,D,-2);
 
 %Sprawdzenie rozwiązań
 X1 = [x1;y1;z1];
 X2 = [x2;y2;z2];
 
-
+X1
 if A*X1 == B
     disp('wyniki obliczone metodą iteracyjną Jacobiego w podpunkcie a są prawidłowe')
 else
     disp('wyniki obliczone metodą iteracyjną Jacobiego w podpunkcie a nie są prawidłowe')
 end
-
+X2
 if C*X2 == D
     disp('wyniki obliczone metodą iteracyjną Jacobiego w podpunkcie b są prawidłowe')
 else
@@ -41,7 +40,7 @@ surf(x,y,z5);
 hold on;
 surf(x,y,z6);
 hold on;
-surf(x,y,z7)
+surf(x,y,z7);
 title('podpunkt a')
 grid on
 xlabel('x')
@@ -58,7 +57,7 @@ surf(x,y,z8);
 hold on;
 surf(x,y,z9);
 hold on;
-surf(x,y,z10)
+surf(x,y,z10);
 title('podpunkt b')
 grid on
 xlabel('x')
