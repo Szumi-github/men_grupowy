@@ -1,5 +1,5 @@
 function [x,y,z] = jacobi(A,B)
-if size(A) ~= [3,3] && size(B) ~= [3,1]
+if size(A) ~= [3,3] | size(B) ~= [3,1]
     disp('Nieprawidłowy rozmiar tablic')
     return
 elseif det(A) == 0
@@ -23,7 +23,7 @@ D([2 3],2) = 0;
 D(3,3) = 0;
 D
 
-X=[x;y;z]
+X=[1;1;1]
 X = -(inv(D))*(U+L)*X+inv(D)*B
 
 end
