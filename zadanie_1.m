@@ -3,13 +3,14 @@
 A = [4 -1 1;4 -8 1;-2 1 5];
 B = [7;-21;15];
 %rozwiązanie za pomocą metody Jacobiego
-[x1,y1,z1] = jacobi(A,B,-2);
+init_val = [0;0;0];
+[x1,y1,z1] = jacobi(A,B,-2,init_val);
 
 %podpunkt b
 C = [4 3 1;1 4 1;3 1 5];
 D = [7;7;5.5];
 %rozwiązanie za pomocą metody Jacobiego
-[x2,y2,z2] = jacobi(C,D,-2);
+[x2,y2,z2] = jacobi(C,D,-2,init_val);
 
 %Sprawdzenie rozwiązań
 X1 = [x1;y1;z1];
@@ -29,7 +30,7 @@ else
 end
 
 
-
+%{
 subplot(1,2,1)
 
 [x,y] = meshgrid(-10:0.75:10,-10:0.75:10);
@@ -63,3 +64,4 @@ grid on
 xlabel('x')
 ylabel('y')
 zlabel('z')
+%}

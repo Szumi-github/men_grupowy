@@ -1,1 +1,9 @@
-function czas,vector = MojOscylator(czas,vector)
+function [outputArg1,outputArg2] = MojOscylator(inputArg1,inputArg2)
+%MOJEULER Summary of this function goes here
+%   Detailed explanation goes here
+
+
+
+outputArg1 = inputArg1;
+outputArg2 = inputArg2;
+end

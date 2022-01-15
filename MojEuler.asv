@@ -1,4 +1,4 @@
-function [outputArg1,outputArg2] = MojEuler(E,w0,A,x0)
+function [outputArg1,outputArg2] = MojEuler(E,w0,A)
 %MOJEULER Summary of this function goes here
 %   Detailed explanation goes here
 syms x(t) w(t) E A w0 V
